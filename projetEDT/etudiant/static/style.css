@@ -1,0 +1,627 @@
+/********** Template CSS **********/
+:root {
+    --primary: #EB1616;
+    --secondary: #191C24;
+    --light: #6C7293;
+    --dark: #000000;
+}
+.btn-outline-success {
+    color: var(--primary);
+    border-color: var(--primary);
+    width: 150px;
+    margin-right: 7px;
+    color: white;
+}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+.modal-body{
+    text-align:justify;
+  
+}
+
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background-image: url('../img/clock_7222730.png');
+
+
+   
+
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('../img/calendar_6994724\ \(1\).png');
+
+
+   
+
+
+}
+#opttypesign{
+    display: block;
+    border-radius: 8px;
+    padding:16px 12px 12px 16px;
+    
+   
+    background-color: #000000; 
+
+}
+#optspc{
+    display: block;
+    border-radius: 8px;
+   
+    background-color: #000000; 
+
+}
+#optgrd{
+    display: block;
+    border-radius: 8px;
+   
+    background-color: #000000; 
+
+}
+#optamph{
+    display: block;
+    border-radius: 8px;
+   
+    background-color: #000000; 
+
+}
+#optniv{
+    
+    display: block;
+    border-radius: 8px;
+   
+    background-color: #000000;  
+}
+.modal-content{
+    background-color: var(--secondary);
+    border-radius: 20px;
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+
+    
+}
+
+
+/* modal */
+/* The Modal (background) */
+.modal-title{
+    color:var(--primary);
+    /* faire un annimation */
+    /* déclaration de l'animation */
+    animation-name: animehcinq;
+    animation-duration: 2s;
+    
+}  
+/* le corp de l'annimation */
+@keyframes animehcinq {
+   
+    from{
+         /* etat initial */
+        margin-left: 50%;
+        width: 100%;
+
+    }to{
+         /* etat finale */
+        margin-left: 0%;
+
+    }
+    
+}
+
+
+.table td:not(.heur) {
+    border: 1px solid #000000;
+
+}
+.table th {
+    border: 1px solid  black
+}
+
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50px;
+}
+.cont{
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-form{
+
+        
+        display: block;
+        max-width: 400px;
+        margin: 20px 30px 40px 150px ;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px var(--primary);
+        border: 1px solid var(--light);    
+        
+
+}
+.profile-picture {
+    box-shadow: 0 0 10px var(--primary);
+    border: 1px solid var(--light);
+
+
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+.schedule-table{
+   
+    width: 200%; /* Ajuster la largeur de la table selon vos besoins */
+  max-height: 400px; /* Définir une hauteur maximale pour activer la barre de défilement */
+  overflow-y: auto; 
+ 
+
+}
+
+.schedule-table table thead tr {
+background:var(--light);
+}
+.schedule-table table thead th {
+padding: 25px 50px;
+color: #fff;
+text-align: center;
+font-size: 20px;
+font-weight: 800;
+position: relative;
+border: 1pw solid var(--primary);
+}
+.schedule-table table thead th:before {
+content: "";
+width: 3px;
+height: 35px;
+background: rgba(255, 255, 255, 0.2);
+position: absolute;
+right: -1px;
+top: 50%;
+transform: translateY(-50%);
+}
+.schedule-table table thead th.last:before {
+content: none;
+}
+.schedule-table table tbody td {
+vertical-align: middle;
+border: 1px solid #e2edf8;
+font-weight: 500;
+padding: 30px;
+width: 100px;
+text-align: center;
+}
+.schedule-table table tbody td.day {
+font-size: 22px;
+font-weight: 600;
+background: #f0f1f3;
+border: 1px solid #e4e4e4;
+position: relative;
+transition: all 0.3s linear 0s;
+min-width: 165px;
+}
+.schedule-table table tbody td.active {
+position: relative;
+z-index: 10;
+transition: all 0.3s linear 0s;
+min-width: 165px;
+}
+.schedule-table table tbody td.active h4 {
+font-weight: 700;
+color: #000;
+font-size: 20px;
+margin-bottom: 5px;
+}
+.schedule-table table tbody td.active p {
+font-size: 16px;
+line-height: normal;
+margin-bottom: 0;
+}
+.schedule-table table tbody td .hover h4 {
+font-weight: 700;
+font-size: 20px;
+color: #ffffff;
+margin-bottom: 5px;
+}
+.schedule-table table tbody td .hover p {
+font-size: 16px;
+margin-bottom: 5px;
+color: #ffffff;
+line-height: normal;
+}
+.schedule-table table tbody td .hover span {
+color: #ffffff;
+font-weight: 600;
+font-size: 18px;
+}
+.schedule-table table tbody td.active::before {
+position: absolute;
+content: "";
+min-width: 100%;
+min-height: 100%;
+transform: scale(0);
+top: 0;
+left: 0;
+z-index: -1;
+border-radius: 0.25rem;
+transition: all 0.3s linear 0s;
+}
+.schedule-table table tbody td .hover {
+position: absolute;
+left: 50%;
+top: 50%;
+width: 120%;
+height: 120%;
+transform: translate(-50%, -50%) scale(0.8);
+z-index: 99;
+background:var(--primary);
+border-radius: 0.25rem;
+padding: 25px 0;
+visibility: hidden;
+opacity: 0;
+transition: all 0.3s linear 0s;
+}
+.schedule-table table tbody td.active:hover .hover {
+transform: translate(-50%, -50%) scale(1);
+visibility: visible;
+opacity: 1;
+}
+
+@media screen and (max-width: 1199px) {
+.schedule-table {
+display: block;
+width: 100%;
+overflow-x: auto;
+}
+.schedule-table table thead th {
+padding: 25px 40px;
+}
+.schedule-table table tbody td {
+padding: 20px;
+}
+.schedule-table table tbody td.active h4 {
+font-size: 18px;
+}
+.schedule-table table tbody td.active p {
+font-size: 15px;
+}
+.schedule-table table tbody td.day {
+font-size: 20px;
+}
+.schedule-table table tbody td .hover {
+padding: 15px 0;
+}
+.schedule-table table tbody td .hover span {
+font-size: 17px;
+}
+}
+@media screen and (max-width: 991px) {
+.schedule-table table thead th {
+font-size: 18px;
+padding: 20px;
+}
+.schedule-table table tbody td.day {
+font-size: 18px;
+}
+.schedule-table table tbody td.active h4 {
+font-size: 17px;
+}
+}
+@media screen and (max-width: 767px) {
+.schedule-table table thead th {
+padding: 15px;
+}
+.schedule-table table tbody td {
+padding: 15px;
+}
+.schedule-table table tbody td.active h4 {
+font-size: 16px;
+}
+.schedule-table table tbody td.active p {
+font-size: 14px;
+}
+.schedule-table table tbody td .hover {
+padding: 10px 0;
+}
+.schedule-table table tbody td.day {
+font-size: 18px;
+}
+.schedule-table table tbody td .hover span {
+font-size: 15px;
+}
+}
+@media screen and (max-width: 575px) {
+.schedule-table table tbody td.day {
+min-width: 135px;
+}}
+
+
+/*** Layout ***/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--secondary);
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.content {
+    margin-left: 250px;
+    min-height: 100vh;
+    background: var(--dark);
+    transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        margin-left: 0;
+    }
+
+    .sidebar.open {
+        margin-left: -250px;
+    }
+
+    .content {
+        width: calc(100% - 250px);
+    }
+
+    .content.open {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+
+    .sidebar.open {
+        margin-left: 0;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+/*** Navbar ***/
+.sidebar .navbar .navbar-nav .nav-link {
+    padding: 7px 20px;
+    color: var(--light);
+    font-weight: 500;
+    border-left: 3px solid var(--secondary);
+    border-radius: 0 30px 30px 0;
+    outline: none;
+    display: flex;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+    background: var(--dark);
+    border-color: var(--primary);
+}
+
+.sidebar .navbar .navbar-nav .nav-link i {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    border-radius: 40px;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover i,
+.sidebar .navbar .navbar-nav .nav-link.active i {
+    background: var(--secondary);
+}
+
+.sidebar .navbar .dropdown-toggle::after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: .5s;
+}
+
+.sidebar .navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.sidebar .navbar .dropdown-item {
+    padding-left: 25px;
+    border-radius: 0 30px 30px 0;
+    color: var(--light);
+}
+
+.sidebar .navbar .dropdown-item:hover,
+.sidebar .navbar .dropdown-item.active {
+    background: var(--dark);
+}
+
+.content .navbar .navbar-nav .nav-link {
+    margin-left: 25px;
+    padding: 12px 0;
+    color: var(--light);
+    outline: none;
+}
+
+.content .navbar .navbar-nav .nav-link:hover,
+.content .navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.content .navbar .sidebar-toggler,
+.content .navbar .navbar-nav .nav-link i {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    border-radius: 40px;
+}
+
+.content .navbar .dropdown-item {
+    color: var(--light);
+}
+
+.content .navbar .dropdown-item:hover,
+.content .navbar .dropdown-item.active {
+    background: var(--dark);
+}
+
+.content .navbar .dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: .5s;
+}
+
+.content .navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+@media (max-width: 575.98px) {
+    .content .navbar .navbar-nav .nav-link {
+        margin-left: 15px;
+    }
+}
+
+
+/*** Date Picker ***/
+.bootstrap-datetimepicker-widget.bottom {
+    top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+    border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+    font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--primary);
+}
+
+
+/*** Testimonial ***/
+.progress .progress-bar {
+    width: 0px;
+    transition: 2s;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 5px solid var(--primary);
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--dark);
+    border-color: var(--primary);
+}
